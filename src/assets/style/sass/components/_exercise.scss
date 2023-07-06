@@ -4,6 +4,72 @@
 .exercises {
   .boxes {
     @extend .grid-boxes;
+    // before and after for animation in box
+    .box {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 3px;
+        background-color: $main-color;
+        transition: 0.5s;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 3px;
+        height: 0;
+        background-color: $main-color;
+        transition: 0.5s;
+      }
+
+      &:hover::before {
+        width: 100%;
+      }
+      &:hover::after {
+        height: 100%;
+      }
+
+      &:hover .target::before {
+        width: 100%;
+      }
+      &:hover .target::after {
+        height: 100%;
+      }
+
+      .target {
+        justify-content: center;
+
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          width: 0;
+          height: 3px;
+          background-color: $main-color;
+          transition: 0.5s;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 3px;
+          height: 0;
+          background-color: $main-color;
+          transition: 0.5s;
+        }
+      }
+      .exercise-name {
+        text-align: center;
+      }
+    }
     .box {
       .target {
         p:nth-child(1) {
@@ -16,75 +82,6 @@
     }
   }
 }
-
-// before and after for animation in box
-.box {
-  position: relative;
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 3px;
-    background-color: $main-color;
-    transition: 0.5s;
-  }
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 3px;
-    height: 0;
-    background-color: $main-color;
-    transition: 0.5s;
-  }
-
-  &:hover::before {
-    width: 100%;
-  }
-  &:hover::after {
-    height: 100%;
-  }
-
-  &:hover .target::before {
-    width: 100%;
-  }
-  &:hover .target::after {
-    height: 100%;
-  }
-
-  .target {
-    justify-content: center;
-
-    &::before {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      width: 0;
-      height: 3px;
-      background-color: $main-color;
-      transition: 0.5s;
-    }
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 3px;
-      height: 0;
-      background-color: $main-color;
-      transition: 0.5s;
-    }
-  }
-  .exercise-name {
-    text-align: center;
-  }
-}
-
-
 
 // modify style pagination
 .page-item.active {
