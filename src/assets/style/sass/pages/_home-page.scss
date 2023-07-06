@@ -1,0 +1,54 @@
+@use "../helpers/helper" as *;
+@use "../helpers/colors" as *;
+
+.home-page {
+  // layout component
+  .layout {
+    min-height: 89vh;
+    @extend %centering;
+    > .container {
+      @extend %centering;
+      gap: 10px;
+      .txt {
+        > p:nth-of-type(1) {
+          color: $main-color;
+        }
+        > p:nth-of-type(2) {
+          font-weight: 500;
+        }
+
+        > .btn {
+          background-color: $main-color;
+          color: white;
+        }
+      }
+      .image {
+        height: 80vh;
+        img {
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  //
+}
+
+@media (max-width: 767px) {
+  .home-page {
+    .layout {
+      .txt {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        p {
+          text-align: center;
+        }
+      }
+      .image {
+        display: none;
+      }
+    }
+  }
+}

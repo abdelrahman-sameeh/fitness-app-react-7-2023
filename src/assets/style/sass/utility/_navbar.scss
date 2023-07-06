@@ -1,0 +1,21 @@
+.navbar-component > div{
+   position: sticky;
+   top: 0;
+   left: 0;
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   // gap: 20px;
+   padding: 10px 20px;
+   a{
+      font-size: 17px;
+      margin-left: 16px;
+   }
+}
+
+@media (max-width:400px) {
+   .navbar-component > div{
+      justify-content: center;
+   }
+}

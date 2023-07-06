@@ -1,0 +1,48 @@
+// import normalization
+@use './utility/normalization' as *;
+
+// import colors
+@use './helpers/colors' as *;
+
+// start components
+// import navbar component
+@use './utility/navbar' as *;
+
+// import home page 
+@use './pages/home-page' as *;
+
+// import search component
+@use './components/search' as *;
+
+// import list body parts component
+@use './components/list-of-body-parts' as *;
+
+// import exercise component
+@use './components/exercise' as *;
+
+// import footer component
+@use './utility/footer' as *;
+
+
+
+// modify multi carsoul
+.react-multi-carousel-list{
+
+   min-height: 100px;
+   
+   ul{
+      gap: 5px;
+   }
+
+   .react-multiple-carousel__arrow{
+      position: absolute;
+      width: fit-content;
+   }
+   .react-multiple-carousel__arrow--left{
+      left: 0;
+   }
+   .react-multiple-carousel__arrow--right{
+      right: 0;
+   }
+}
+

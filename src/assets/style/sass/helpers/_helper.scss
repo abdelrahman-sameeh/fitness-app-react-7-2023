@@ -1,0 +1,11 @@
+%centering{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.grid-boxes{
+   display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 5px;
+}

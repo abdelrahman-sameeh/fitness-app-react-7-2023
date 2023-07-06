@@ -1,0 +1,28 @@
+@use '../helpers/colors' as *;
+
+.list-of-body-parts{
+   .container{
+      >div{
+         img{
+            width: 40px;
+            margin-left: 5px;
+         }
+      }
+      .parts{
+         display: flex;
+         align-items: center;
+         gap: 5px;
+         margin-top: 12px;
+         flex-wrap: wrap;
+         .part{
+            padding: 10px 20px;
+            background-color: $main-color;
+            border-radius: 6px;
+            color: white;
+            font-size: 18px;
+            text-align: center;
+            text-transform: capitalize;
+         }
+      }
+   }
+}
